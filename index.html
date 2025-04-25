@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GustaX Auxílio</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+    h1 {
+      font-size: 2em;
+      color: #0f0;
+      margin-bottom: 20px;
+    }
+    button {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 10px;
+      border: none;
+      background: #222;
+      color: #0f0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #444;
+    }
+    input[type="file"] {
+      margin-top: 10px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎮 GustaX Auxílio</h1>
+  <button onclick="alert('Dispositivo agora simula iPhone 16 Pro Max!')">Simular iPhone 16 Pro Max</button>
+  <button onclick="alert('Tremedeira reduzida!')">Diminuir Tremedeira</button>
+  <button onclick="alert('Precisão aumentada!')">Aumentar Precisão</button>
+  <button onclick="alert('Mira Grudante ativada!')">Mira Grudante</button>
+  <button onclick="alert('Gráficos reduzidos!')">Reduzir Gráficos</button>
+  <button onclick="alert('FPS liberado para até 240!')">Ativar FPS 240</button>
+  <button onclick="window.location.href='intent://com.dts.freefireth#Intent;scheme=package;end';">Abrir Free Fire</button>
+  
+  <input type="file" id="fileInput" />
+  <button onclick="injectFile()">Injetar</button>
+
+  <script>
+    function injectFile() {
+      const fileInput = document.getElementById('fileInput');
+      if (fileInput.files.length === 0) {
+        alert('Selecione um arquivo primeiro.');
+      } else {
+        const fileName = fileInput.files[0].name;
+        alert('Arquivo "' + fileName + '" injetado com sucesso!');
+      }
+    }
+  </script>
+</body>
+</html>
